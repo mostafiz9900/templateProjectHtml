@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div style="background:#666; margin:0 auto; width:500px;">
+    	<form action="form.html" style="padding:10px">
+        	<label>ID</label>
+            <input type="text" name="id" style="border:5px solid #9F3;">
+            <p>
+            <label>Name</label>
+            <input type="text" name="name">
+            <p>
+            <label>Gender</label>
+            <input type="radio"  name="gender" value="male">Male
+            <input type="radio"  name="gender" value="female">Female
+            <p>
+            <label>Subject</label>
+            <input type="checkbox"  name="subject" value="ppt">PPT
+            <input type="checkbox"  name="subject" value="js">JS
+            <input type="checkbox"  name="subject" value="html">HTML
+            <p>
+            <select name="round">
+            	<option>Select A Round</option>
+                <option value="round-33">Round-33</option>
+                <option value="round-34">Round-34</option>
+                <option value="round-35">Round-35</option>
+                <option value="round-36">Round-36</option>
+                <option value="round-37">Round-37</option>
+                <option value="round-38">Round-38</option>
+            </select>
+            <p>
+            <label style="vertical-align:top">Commend</label>
+            <textarea name="commend" rows="4" cols="20" ></textarea>
+            <p>
+            <label>Password</label>
+            <input type="password" name="possword">
+            
+            <p>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Send" onsubmit="sendFormData()">
+        </form>
+    </div>
+    
+    <p>
+    
+    <script>
+    	function sendFormData(){
+			var value1="value1";
+			var value2="value2";
+			var value3="value3";
+			var value4="value4";
+			var value5="value5";
+			var value6="value6";
+			var value7="value7";
+		queryString="?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5 + "&para6=" + value6 + "&para7=" + value7;
+		window.location.href="form.html" + queryString;
+			}
+    </script>
+    
+    <div style="background:#666; margin:0 auto; width:500px;">
+    	<script>
+        	var queryString=decodeURIComponent(window.location.search);
+				queryString=queryString.substring(1);
+			var queries=queryString.split("&");
+			for(var i=0; i<queries.length; i++){
+				document.write(queries[i] + "<br/>")
+				}
+        </script>
+    </div>
+</body>
+</html>
