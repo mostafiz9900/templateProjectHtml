@@ -1,0 +1,29 @@
+.socialshare-widget
+{
+	width:195px;
+	margin-left:auto;
+	margin-right:auto;
+	height:80px;
+}
+
+.socialshare-twitter
+{
+	width:60px;
+	float:left;
+}
+
+.socialshare-stumbleupon
+{
+	width:60px;
+	float:left;
+}
+
+.socialshare-facebook
+{
+	float:left;
+}
+
+input[type=checkbox]
+{ 
+	margin-right:10px;
+}
